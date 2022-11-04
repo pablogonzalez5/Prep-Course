@@ -16,7 +16,7 @@ function matriz (n,m) {
 natriz (2,2)
 
 
-npm test JSIII.test.js
+npm test JSIV.test.js
 
 var i = 0;
 
@@ -91,3 +91,15 @@ function conection(status) {
     // Tu código:
   }
   
+  var num=numero;
+  var retorno = [];
+  for (let i =0; i <10 ; i++) {
+   num =num+2;
+   if (i==5) { continue } else {retorno.push(num); }
+ 
+  
+  
+
+  }
+
+  return retorno; 
