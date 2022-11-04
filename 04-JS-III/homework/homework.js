@@ -332,9 +332,11 @@ function continueStatement(numero) {
   var num=numero;
   var retorno = [];
   for (let i =0; i <10 ; i++) {
-   num =num+2;
+   if (i === 5 ) continue;
+    num =num+2;
+   
    retorno.push(num);
-  
+   
   
 
   }
