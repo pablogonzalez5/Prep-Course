@@ -98,9 +98,8 @@ function crearInstanciaPersona(nombre, apellido, edad, dir) {
 function agregarMetodo() {
 
   Persona.prototype.datos =
-  function ()
-  {
-    const saludo= this.nombre +","+ this.edad+ "años";
+  function ()  {
+    const saludo= this.nombre +", "+ this.edad + " años";
     return saludo;
   }
   //La función agrega un método "datos" a la clase Persona que toma el nombre y la edad de la persona y devuelve: 
