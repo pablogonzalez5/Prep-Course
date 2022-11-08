@@ -16,7 +16,7 @@ function matriz (n,m) {
 natriz (2,2)
 
 
-npm test JSIV.test.js
+npm test JSVI.test.js
 
 var i = 0;
 
