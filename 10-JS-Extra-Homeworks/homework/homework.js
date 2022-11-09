@@ -1,5 +1,7 @@
 // No cambies los nombres de las funciones.
 
+const { join } = require("@11ty/eleventy/src/TemplatePath");
+
 function deObjetoAmatriz(objeto){
   // Escribe una función que convierta un objeto en una matriz, donde cada elemento representa 
   // un par clave-valor en forma de matriz.
@@ -10,10 +12,36 @@ function deObjetoAmatriz(objeto){
       C: 3
     }) ➞ [["D", 1], ["B", 2], ["C", 3]]*/
   //Escribe tu código aquí
+  var arrayClaves = Object.keys(objeto);
+  var arrayValores = Object.values(objeto);
+    var array =[];
+    for (let i = 0; i < arrayClaves.length; i++) {
+  
+      array [i ]= [arrayClaves[i],arrayValores[i]];
+     
+   }
+return array;
 }
 
 
 function numberOfCharacters(string) {
+  var  objet = { };
+  
+  for (let i = 0; i< string.length; i++) {
+    var count = 0;
+    var caracter = string.charAt(i);
+    for (let j = 0; j < string.length; j++) {
+        
+      if (caracter === string.charAt(j) ) { count= count+1 }
+        
+    }
+   
+    objet [caracter ] = count;
+  } 
+
+ 
+  return objet;
+ 
   //La función recibe un string. Recorre el srting y devuelve el caracter con el número de veces que aparece 
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
@@ -22,6 +50,19 @@ function numberOfCharacters(string) {
 
 
 function capToFront(s) {
+  var letra = "";
+  var  mayuscula = "";
+  var minuscula= "";
+  for (let i=0 ; i < s.length ; i++) {
+    letra = s.charAt(i);
+    if (letra === letra.toUpperCase()) {
+      mayuscula =mayuscula +letra ; 
+     
+    }
+    else {minuscula =minuscula +letra;}
+
+  }
+  return mayuscula +minuscula ;
   //Realiza una función que reciba como parámetro un string y mueva todas las letras mayúsculas
   //al principio de la palabra.
   //Ejemplo: soyHENRY -> HENRYsoy
